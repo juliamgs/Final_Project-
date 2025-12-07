@@ -23,6 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 .logo {
@@ -36,6 +37,11 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-direction: row;
+}
+
+.nav-links li {
+    display: inline-block;
 }
 
 .nav-links a {
@@ -604,14 +610,19 @@ footer {
 /* Mobile */
 @media screen and (max-width: 768px) {
     main {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(5, 1fr);
     }
     
-    /* single column on mobile */
-    .about-content,
-    .projects-container,
+    .about-content {
+        grid-column: 2 / 5;
+    }
+    
+    .projects-container {
+        grid-column: 1 / 6;
+    }
+    
     .contact-container {
-        grid-column: 1;
+        grid-column: 2 / 5;
     }
     
     .hero {
