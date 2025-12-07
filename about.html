@@ -9,7 +9,7 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-    <!-- Fixed Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="index.html" class="logo">JM</a>
@@ -22,7 +22,7 @@
         </div>
     </nav>
 
-    <main id="main-content">
+    <main>
         <section class="about-hero">
             <h1>About Me</h1>
             <p class="hero-subtitle">
@@ -30,7 +30,7 @@
             </p>
         </section>
 
-        <div class="about-content">
+        <div class="about-content" id="main-content">
             <section class="about-section">
                 <h2>My Story</h2>
                 <p>
@@ -47,15 +47,15 @@
                 <h2>Education</h2>
                 <div class="timeline-item">
                     <h3>University of Michigan School of Information</h3>
-                    <p class="meta">Masters in UX Research and Design | 2024 - 2026</p>
+                    <p class="meta">Masters in UX Research and Design | 2025 - 2026</p>
                     <p>
                         Focusing on inclusive design, user research methodologies, and advanced prototyping techniques. 
-                        Engaged in real-world projects partnering with companies like Stellantis and Delta Airlines.
+                        Engaged in real-world projects partnering with companies like Stellantis and Reaction Technologies.
                     </p>
                 </div>
                 <div class="timeline-item">
                     <h3>University of Michigan School of Information</h3>
-                    <p class="meta">Bachelor of Science in Information | 2020 - 2024</p>
+                    <p class="meta">Bachelor of Science in Information | 2021 - 2025</p>
                     <p>
                         Concentration in User Experience Design with coursework in human-computer interaction, 
                         information architecture, and web development.
@@ -74,7 +74,7 @@
                     </p>
                 </div>
                 <div class="timeline-item">
-                    <h3>UX Designer & Researcher - Delta Airlines</h3>
+                    <h3>UX Designer & Creator - Skymood</h3>
                     <p class="meta">Aug 2024 - Dec 2024</p>
                     <p>
                         Created a transformative in-flight entertainment system that personalizes content based on passenger anxiety assessments. 
@@ -111,10 +111,22 @@
             <p>&copy; 2024 Julia Magallanes</p>
             <div class="footer-links">
                 <a href="mailto:juliamgs@umich.edu">Email</a>
-                <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank">LinkedIn</a>
-                <a href="https://github.com/juliamgs" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/juliamgs" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Auto-update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElement = document.querySelector('footer .footer-content p');
+            
+            if (copyrightElement) {
+                copyrightElement.innerHTML = `&copy; ${currentYear} Julia Magallanes`;
+            }
+        });
+    </script>
 </body>
 </html>

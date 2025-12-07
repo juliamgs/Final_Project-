@@ -9,7 +9,7 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-    <!-- Fixed Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="index.html" class="logo">JM</a>
@@ -22,7 +22,7 @@
         </div>
     </nav>
 
-    <main id="main-content">
+    <main>
         <section class="contact-hero">
             <h1>Let's Connect</h1>
             <p class="hero-subtitle">
@@ -30,24 +30,24 @@
             </p>
         </section>
 
-        <div class="contact-container">
+        <div class="contact-container" id="main-content">
             <section class="contact-methods">
                 <div class="contact-card">
-                    <h3>📧 Email</h3>
+                    <h2>📧 Email</h2>
                     <a href="mailto:juliamgs@umich.edu">juliamgs@umich.edu</a>
                 </div>
                 <div class="contact-card">
-                    <h3>💼 LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank">Connect with me</a>
+                    <h2>💼 LinkedIn</h2>
+                    <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank" rel="noopener noreferrer">Connect with me</a>
                 </div>
                 <div class="contact-card">
-                    <h3>💻 GitHub</h3>
-                    <a href="https://github.com/juliamgs" target="_blank">View my code</a>
+                    <h2>💻 GitHub</h2>
+                    <a href="https://github.com/juliamgs" target="_blank" rel="noopener noreferrer">View my code</a>
                 </div>
             </section>
 
             <section class="contact-form">
-                <h3>Send Me a Message</h3>
+                <h2>Send Me a Message</h2>
                 <form action="#" method="post">
                     <div class="form-group">
                         <label for="name">Your Name *</label>
@@ -93,10 +93,22 @@
             <p>&copy; 2024 Julia Magallanes</p>
             <div class="footer-links">
                 <a href="mailto:juliamgs@umich.edu">Email</a>
-                <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank">LinkedIn</a>
-                <a href="https://github.com/juliamgs" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/juliamgs" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Auto-update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElement = document.querySelector('footer .footer-content p');
+            
+            if (copyrightElement) {
+                copyrightElement.innerHTML = `&copy; ${currentYear} Julia Magallanes`;
+            }
+        });
+    </script>
 </body>
 </html>

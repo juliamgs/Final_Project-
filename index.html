@@ -9,7 +9,7 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-    <!-- Fixed Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="index.html" class="logo">JM</a>
@@ -22,7 +22,7 @@
         </div>
     </nav>
 
-    <main id="main-content">
+    <main>
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
@@ -41,7 +41,7 @@
         </section>
 
         <!-- Featured Projects Section -->
-        <section class="projects-section">
+        <section class="projects-section" id="main-content">
             <h2 class="section-title">Featured Projects</h2>
             
             <div class="project-showcase">
@@ -56,10 +56,10 @@
 
                 <div class="project-item">
                     <div class="project-content">
-                        <h3>Delta Airlines - In-Flight System</h3>
+                        <h3>Skymood - In-Flight Anxiety Management</h3>
                         <p class="project-role">UX Designer & Researcher • Aug 2024 - Dec 2024</p>
                         <p>Created a transformative in-flight system that personalizes entertainment based on anxiety assessments to improve passenger experience.</p>
-                        <a href="projects.html#delta" class="project-link">View Project →</a>
+                        <a href="projects.html#skymood" class="project-link">View Project →</a>
                     </div>
                 </div>
 
@@ -74,16 +74,16 @@
 
                 <div class="project-item">
                     <div class="project-content">
-                        <h3>CoachMate - Mobile Training App</h3>
+                        <h3>Reaction Technologies - Mobile Training App</h3>
                         <p class="project-role">UX Designer • Jun 2024 - Aug 2024</p>
                         <p>Designed and prototyped a mobile app that guides athletes through sport-specific drills, targeting 20K users by 2026.</p>
-                        <a href="projects.html#coachmate" class="project-link">View Project →</a>
+                        <a href="projects.html#reactionTech" class="project-link">View Project →</a>
                     </div>
                 </div>
 
                 <div class="project-item">
                     <div class="project-content">
-                        <h3>Hyperion Coffee - E-commerce Redesign</h3>
+                        <h3>Roos Roast Coffee - E-commerce Redesign</h3>
                         <p class="project-role">UX Designer • Jan 2024 - Mar 2024</p>
                         <p>Comprehensive redesign of e-commerce website to improve user experience and subscription offerings for local coffee roaster.</p>
                         <a href="projects.html#hyperion" class="project-link">View Project →</a>
@@ -139,10 +139,22 @@
             <p>&copy; 2024 Julia Magallanes</p>
             <div class="footer-links">
                 <a href="mailto:juliamgs@umich.edu">Email</a>
-                <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank">LinkedIn</a>
-                <a href="https://github.com/juliamgs" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/julia-magallanes" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/juliamgs" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Auto-update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElement = document.querySelector('footer .footer-content p');
+            
+            if (copyrightElement) {
+                copyrightElement.innerHTML = `&copy; ${currentYear} Julia Magallanes`;
+            }
+        });
+    </script>
 </body>
 </html>
